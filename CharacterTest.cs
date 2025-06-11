@@ -10,7 +10,7 @@ public partial class CharacterTest : CharacterBody2D
 
     public override void _Ready()
     {
-        var collision = GetNode<Area2D>("/root/Node2D/EnemyTest");
+        var collision = GetNode<Area2D>("/root/Node2D/EnemyTest"); 
         collision.BodyEntered += onBodyEntered;
     }
 
