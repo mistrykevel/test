@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://yr5gxgsks2q4"]
+
+[ext_resource type="Script" uid="uid://doe56heygywtr" path="res://CharacterTest.cs" id="1_cjnx4"]
+[ext_resource type="Texture2D" uid="uid://bcvdall2x02bu" path="res://Sprites/PNG/Players/Player Red/playerRed_stand.png" id="2_cjnx4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxkgb"]
+size = Vector2(40, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjnx4"]
+size = Vector2(24, 40)
+
+[node name="CharacterTest" type="CharacterBody2D"]
+floor_stop_on_slope = false
+script = ExtResource("1_cjnx4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cjnx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_gxkgb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_cjnx4")
+debug_color = Color(0.999435, 0, 0.113173, 0.42)
